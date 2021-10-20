@@ -9,7 +9,9 @@ chunk_size = 200
 class Produce:
 
     def __init__(self, file_name):
-        credentials = pika.PlainCredentials('guest', 'guest')
+        user = 'guest'
+        password = 'guest'
+        credentials = pika.PlainCredentials(user, password)
         parameters = pika.ConnectionParameters('192.168.202.128',
                                                5672,
                                                '/',
